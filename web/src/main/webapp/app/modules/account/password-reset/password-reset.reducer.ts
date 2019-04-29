@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { translate } from 'react-jhipster';
+import { push } from 'connected-react-router';
 
 import { REQUEST, SUCCESS, FAILURE } from 'app/shared/reducers/action-type.util';
 
@@ -62,13 +63,19 @@ export const handlePasswordResetInit = mail => ({
   }
 });
 
-export const handlePasswordResetFinish = (key, newPassword) => ({
-  type: ACTION_TYPES.RESET_PASSWORD_FINISH,
-  payload: axios.post(`${apiUrl}/finish`, { key, newPassword }),
-  meta: {
-    successMessage: translate('reset.finish.messages.success')
+export const handlePasswordResetFinish = (key, newPassword) => async (dispatch, getState) => {
+  const result = await dispatch({
+    type: ACTION_TYPES.RESET_PASSWORD_FINISH,
+    payload: axios.post(`${apiUrl}/finish`, { key, newPassword }),
+    meta: {
+      successMessage: translate('reset.finish.messages.success')
+    }
+  });
+
+  if (result.value && result.value.status === 200) {
+    dispatch(push('/login'));
   }
-});
+};
 
 export const reset = () => ({
   type: ACTION_TYPES.RESET
