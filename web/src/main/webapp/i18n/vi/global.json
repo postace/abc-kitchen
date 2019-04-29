@@ -47,12 +47,15 @@
       "info": {
         "authenticated": {
           "prefix": "Nếu bạn muốn ",
-          "link": "đăng nhập",
+          "link": "Đăng nhập",
           "suffix": ", bạn có thể thử với tài khoản mặc định:<br/>- Quản trị viên (tài khoản=\"admin\" và mật khẩu=\"admin\") <br/>- Người dùng (tài khoản=\"user\" và mật khẩu=\"user\")."
         },
         "register": {
           "noaccount": "Bạn vẫn chưa có tài khoản?",
           "link": "Đăng ký tài khoản mới"
+        },
+        "signin": {
+          "alreadyhave": "Bạn đã có tài khoản rồi?"
         }
       },
       "error": {
