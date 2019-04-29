@@ -20,8 +20,7 @@ module.exports = options =>
     output: {
       path: utils.root('build/www'),
       filename: 'app/[name].bundle.js',
-      chunkFilename: 'app/[id].chunk.js',
-      publicPath: '/'
+      chunkFilename: 'app/[id].chunk.js'
     },
     module: {
       rules: [
