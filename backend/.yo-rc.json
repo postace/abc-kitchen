@@ -1,0 +1,36 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.postace.abckitchen"
+    },
+    "jhipsterVersion": "5.8.2",
+    "applicationType": "monolith",
+    "baseName": "abckitchen",
+    "packageName": "com.postace.abckitchen",
+    "packageFolder": "com/postace/abckitchen",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": true,
+    "jwtSecretKey": "YTI0N2YxNmY3ZDk0MTc4ZGU0NTE5NjU0YTgyNDExZGU2OTU4Nzk2Njc2OTE2N2NmNmJhNDg4ZjhiYTgzYjUzYzQ5NmIyN2UyYWU0YTdhMWJmMjBjM2ZkNjQ3ODhlZGFhNmNjYTBmNmNkMmFmZjBiYmI3ZDYyMGIwOGE2MzE4ZDY=",
+    "testFrameworks": [
+      "gatling"
+    ],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "skipClient": true
+  }
+}

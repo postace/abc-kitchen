@@ -1,0 +1,27 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "nativeLanguage": "en"
+    },
+    "jhipsterVersion": "5.8.2",
+    "applicationType": "monolith",
+    "baseName": "abckitchen",
+    "clientFramework": "react",
+    "useSass": false,
+    "clientPackageManager": "npm",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "databaseType": "sql",
+    "devDatabaseType": "sql",
+    "prodDatabaseType": "sql",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "nativeLanguage": "en",
+    "languages": ["en", "vi"],
+    "skipServer": true
+  }
+}
