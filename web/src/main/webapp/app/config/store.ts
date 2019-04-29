@@ -20,11 +20,14 @@ const defaultMiddlewares = [
   loggerMiddleware,
   routerMiddleware(history)
 ];
+
+const composeEnhancers = (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
 const composedMiddlewares = middlewares =>
   process.env.NODE_ENV === 'development'
-    ? compose(
-        applyMiddleware(...defaultMiddlewares, ...middlewares),
-        DevTools.instrument()
+    ? composeEnhancers(
+        applyMiddleware(...defaultMiddlewares, ...middlewares)
+        // DevTools.instrument()
       )
     : compose(applyMiddleware(...defaultMiddlewares, ...middlewares));
 
