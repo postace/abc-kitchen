@@ -4,7 +4,7 @@ import './app.css';
 import React from 'react';
 import { connect } from 'react-redux';
 import { Card } from 'reactstrap';
-import { HashRouter as Router } from 'react-router-dom';
+import { Router } from 'react-router-dom';
 import { ToastContainer, ToastPosition, toast } from 'react-toastify';
 
 import { IRootState } from 'app/shared/reducers';
@@ -16,6 +16,7 @@ import Footer from 'app/shared/layout/footer/footer';
 import { hasAnyAuthority } from 'app/shared/auth/private-route';
 import ErrorBoundary from 'app/shared/error/error-boundary';
 import { AUTHORITIES } from 'app/config/constants';
+import history from 'app/config/history';
 import AppRoutes from 'app/routes';
 
 export interface IAppProps extends StateProps, DispatchProps {}
@@ -29,7 +30,7 @@ export class App extends React.Component<IAppProps> {
   render() {
     const paddingTop = '60px';
     return (
-      <Router>
+      <Router history={history}>
         <div className="app-container" style={{ paddingTop }}>
           <ToastContainer
             position={toast.POSITION.TOP_LEFT as ToastPosition}

@@ -1,8 +1,11 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import promiseMiddleware from 'redux-promise-middleware';
 import thunkMiddleware from 'redux-thunk';
+import { connectRouter, routerMiddleware } from 'connected-react-router';
+
 import reducer, { IRootState } from 'app/shared/reducers';
 import DevTools from './devtools';
+import history from './history';
 import errorMiddleware from './error-middleware';
 import notificationMiddleware from './notification-middleware';
 import loggerMiddleware from './logger-middleware';
@@ -14,7 +17,8 @@ const defaultMiddlewares = [
   notificationMiddleware,
   promiseMiddleware(),
   loadingBarMiddleware(),
-  loggerMiddleware
+  loggerMiddleware,
+  routerMiddleware(history)
 ];
 const composedMiddlewares = middlewares =>
   process.env.NODE_ENV === 'development'
@@ -24,6 +28,7 @@ const composedMiddlewares = middlewares =>
       )
     : compose(applyMiddleware(...defaultMiddlewares, ...middlewares));
 
-const initialize = (initialState?: IRootState, middlewares = []) => createStore(reducer, initialState, composedMiddlewares(middlewares));
+const initialize = (initialState?: IRootState, middlewares = []) =>
+  createStore(connectRouter(history)(reducer), initialState, composedMiddlewares(middlewares));
 
 export default initialize;

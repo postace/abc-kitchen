@@ -3,9 +3,11 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { AppContainer } from 'react-hot-loader';
+import { ConnectedRouter } from 'connected-react-router';
 
 import DevTools from './config/devtools';
 import initStore from './config/store';
+import history from './config/history';
 import { registerLocale } from './config/translation';
 import setupAxiosInterceptors from './config/axios-interceptor';
 import { clearAuthentication } from './shared/reducers/authentication';
@@ -30,11 +32,13 @@ const render = Component =>
     <ErrorBoundary>
       <AppContainer>
         <Provider store={store}>
-          <div>
-            {/* If this slows down the app in dev disable it and enable when required  */}
-            {devTools}
-            <Component />
-          </div>
+          <ConnectedRouter history={history}>
+            <div>
+              {/* If this slows down the app in dev disable it and enable when required  */}
+              {devTools}
+              <Component />
+            </div>
+          </ConnectedRouter>
         </Provider>
       </AppContainer>
     </ErrorBoundary>,
