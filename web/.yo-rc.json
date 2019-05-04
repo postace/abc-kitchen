@@ -21,7 +21,10 @@
     "otherModules": [],
     "enableTranslation": true,
     "nativeLanguage": "en",
-    "languages": ["en", "vi"],
+    "languages": [
+      "en",
+      "vi"
+    ],
     "skipServer": true
   }
 }

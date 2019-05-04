@@ -1,12 +1,14 @@
 {
   "global": {
     "title": "Abckitchen",
-    "browsehappy": "Bạn đang sử dụng một trình duyệt <strong>quá cũ</strong>. Vui lòng <a href=\"http://browsehappy.com/?locale=en\">nâng cấp trình duyệt</a> của bạn để có trải nghiệm tốt nhất.",
+    "browsehappy":
+      "Bạn đang sử dụng một trình duyệt <strong>quá cũ</strong>. Vui lòng <a href=\"http://browsehappy.com/?locale=en\">nâng cấp trình duyệt</a> của bạn để có trải nghiệm tốt nhất.",
     "menu": {
       "home": "Trang chủ",
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Thực thể",
+        "ingredient": "Ingredient",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {
@@ -48,7 +50,8 @@
         "authenticated": {
           "prefix": "Nếu bạn muốn ",
           "link": "Đăng nhập",
-          "suffix": ", bạn có thể thử với tài khoản mặc định:<br/>- Quản trị viên (tài khoản=\"admin\" và mật khẩu=\"admin\") <br/>- Người dùng (tài khoản=\"user\" và mật khẩu=\"user\")."
+          "suffix":
+            ", bạn có thể thử với tài khoản mặc định:<br/>- Quản trị viên (tài khoản=\"admin\" và mật khẩu=\"admin\") <br/>- Người dùng (tài khoản=\"user\" và mật khẩu=\"user\")."
         },
         "register": {
           "noaccount": "Bạn vẫn chưa có tài khoản?",

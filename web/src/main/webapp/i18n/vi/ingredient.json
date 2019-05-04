@@ -1,0 +1,22 @@
+{
+  "abckitchenApp": {
+    "ingredient": {
+      "home": {
+        "title": "Ingredients",
+        "createLabel": "Thêm mới một Ingredient",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Ingredient"
+      },
+      "created": "Một Ingredient mới được tạo với định danh {{ param }}",
+      "updated": "Một Ingredient cập nhật với định danh {{ param }}",
+      "deleted": "Một Ingredient đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Ingredient {{ id }}?"
+      },
+      "detail": {
+        "title": "Ingredient"
+      },
+      "name": "Name",
+      "unit": "Unit"
+    }
+  }
+}
